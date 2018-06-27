@@ -15,8 +15,7 @@ namespace Cake.Curl.Tests
             public void Should_Throw_If_File_Path_Is_Null()
             {
                 // Given
-                var fixture = new CurlUploadFileFixture();
-                fixture.FilePath = null;
+                var fixture = new CurlUploadFileFixture {FilePath = null};
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -30,8 +29,7 @@ namespace Cake.Curl.Tests
             public void Should_Throw_If_Host_Is_Null()
             {
                 // Given
-                var fixture = new CurlUploadFileFixture();
-                fixture.Host = null;
+                var fixture = new CurlUploadFileFixture {Host = null};
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -45,8 +43,7 @@ namespace Cake.Curl.Tests
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new CurlUploadFileFixture();
-                fixture.Settings = null;
+                var fixture = new CurlUploadFileFixture {Settings = null};
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
