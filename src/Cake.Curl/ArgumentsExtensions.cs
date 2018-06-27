@@ -26,6 +26,18 @@ namespace Cake.Curl
                     $"{settings.Username}:{settings.Password}");
             }
 
+            if (settings.Insecure)
+            {
+                arguments.Append("--insecure");
+            }
+
+            if (settings.CaCertFile != null)
+            {
+                arguments.AppendSwitchQuoted(
+                    "--cacert",
+                    $"{settings.CaCertFile}");
+            }
+
             if (settings.Headers != null)
             {
                 foreach (var item in settings.Headers)

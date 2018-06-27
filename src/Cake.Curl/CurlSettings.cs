@@ -78,5 +78,15 @@ namespace Cake.Curl
         /// as the one specified in the original request.
         /// </remarks>
         public bool FollowRedirects { get; set; }
+
+        /// <summary>
+        /// Passes the --insecure argument to curl
+        /// </summary>
+        public bool Insecure { get; set; }
+
+        /// <summary>
+        /// Path to the CACERT file. (--cacert FILE)
+        /// </summary>
+        public string CaCertFile { get; set; }
     }
 }
